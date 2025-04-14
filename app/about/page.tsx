@@ -3,111 +3,119 @@ import React from 'react';
 const teamMembers = [
   {
     name: 'Dr. Sarah Johnson',
-    role: 'Founder & CEO',
-    bio: 'Former professional athlete and nutrition scientist with over 15 years of experience in sports nutrition.',
-    image: '/team/sarah.jpg'
+    role: 'Founder & Chief Science Officer',
+    bio: 'PhD in Sports Nutrition, former Olympic athlete, and leading researcher in performance optimization.',
+    image: '/team/sarah.jpg',
+    expertise: ['Sports Nutrition', 'Performance Research', 'Athlete Development']
   },
   {
     name: 'Dr. Michael Chen',
-    role: 'Head of Research & Development',
-    bio: 'PhD in Nutritional Sciences, specializing in performance nutrition and supplement formulation.',
-    image: '/team/michael.jpg'
+    role: 'Head of Research & Innovation',
+    bio: 'PhD in Nutritional Biochemistry, specializing in advanced supplement formulation and clinical research.',
+    image: '/team/michael.jpg',
+    expertise: ['Supplement Science', 'Clinical Research', 'Product Development']
   },
   {
     name: 'Emma Davis',
-    role: 'Performance Nutrition Coach',
-    bio: 'Certified sports nutritionist with experience working with elite athletes across multiple sports.',
-    image: '/team/emma.jpg'
+    role: 'Director of Performance Nutrition',
+    bio: 'MS in Sports Science, certified performance nutritionist with experience across elite sports organizations.',
+    image: '/team/emma.jpg',
+    expertise: ['Performance Nutrition', 'Athlete Programming', 'Recovery Optimization']
   }
 ];
 
 const values = [
   {
-    title: 'Holistic Development',
-    description: 'We focus on the physical, mental, and emotional growth of athletes at all levels.'
+    title: 'Scientific Excellence',
+    description: 'Every product and protocol is backed by rigorous research and clinical validation.',
+    icon: '🔬'
   },
   {
-    title: 'Supportive Environment',
-    description: 'Creating a space of non-judgment, support, and kindness where athletes can truly flourish.'
+    title: 'Performance First',
+    description: 'We focus on measurable results and real-world athletic performance enhancement.',
+    icon: '⚡'
   },
   {
-    title: 'Community First',
-    description: "Building a community where athletes celebrate each other's success and grow together."
+    title: 'Innovation Driven',
+    description: 'Constantly pushing boundaries in sports nutrition and performance optimization.',
+    icon: '🚀'
   },
   {
-    title: 'Science-Backed Solutions',
-    description: 'Every product and recommendation is backed by rigorous scientific research and testing.'
+    title: 'Athlete Centered',
+    description: 'Solutions designed by athletes, for athletes, at every level of competition.',
+    icon: '🏆'
   }
 ];
 
 export default function About() {
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-background min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 bg-primary/10">
+      <section className="relative py-24 bg-gradient-to-br from-primary/10 to-accent/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl font-bold mb-6">About Level Up Nutrition</h1>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              We empower athletes from grassroots to professionals with science-backed nutrition to help them reach peak performance, build resilience, and unleash their true potential.
+            <h1 className="text-5xl md:text-6xl font-heading font-bold mb-6 text-text-dark">About Level Up Nutrition</h1>
+            <p className="text-xl text-text-light max-w-3xl mx-auto">
+              We're revolutionizing sports nutrition through cutting-edge research, innovative formulations, and athlete-driven development.
             </p>
           </div>
         </div>
       </section>
 
       {/* Overview Section */}
-      <section className="py-16">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose max-w-none">
-            <h2 className="text-3xl font-bold mb-6">Overview</h2>
-            <p className="text-lg text-gray-700 mb-6">
-              LevelUp is a brand that focuses on the holistic development of the athlete. Overall development includes the physical, the mental and the emotional. We want to create a space that caters to the needs of the athlete from the grassroots to the professionals.
+            <h2 className="text-4xl font-heading font-bold mb-8 text-text-dark">Our Vision</h2>
+            <p className="text-lg text-text-light mb-6">
+              LevelUp Nutrition is at the forefront of performance nutrition innovation. We combine advanced scientific research with real-world athletic experience to create solutions that deliver measurable results.
             </p>
-            <p className="text-lg text-gray-700 mb-6">
-              We believe that improvement occurs in an environment of non-judgement, support and kindness. We try to reinforce the idea of athletes enjoying each other's success and throw away any feelings of jealousy and "competitiveness" amongst each other and find solutions on how they can get better as athletes and individuals.
+            <p className="text-lg text-text-light mb-6">
+              Our approach is rooted in three core principles: scientific validation, performance optimization, and athlete-centric development. We believe that true performance enhancement comes from understanding the complex interplay between nutrition, training, and recovery.
             </p>
-            <p className="text-lg text-gray-700">
-              At the end of the day sport is played for fun and it brings people together as a community.
+            <p className="text-lg text-text-light">
+              Every product we create undergoes rigorous testing and validation to ensure it meets the highest standards of efficacy and safety. We work directly with athletes at all levels to refine and perfect our formulations.
             </p>
           </div>
         </div>
       </section>
 
       {/* Our Story Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-20 bg-background-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold mb-8">Our Story</h2>
+          <h2 className="text-4xl font-heading font-bold mb-12 text-text-dark">Our Journey</h2>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="prose max-w-none">
-              <p className="text-lg text-gray-700 mb-6">
-                LevelUp Nutrition was born out of necessity. As an athlete that faced difficulty in terms of training during the Covid era, I knew if I wasn't able to get better during the lockdown, there is no way I would survive once this had ended. I had to find a way to maintain my fitness or get better.
+              <p className="text-lg text-text-light mb-6">
+                Founded by Dr. Sarah Johnson, a former Olympic athlete and sports nutrition researcher, LevelUp Nutrition emerged from a critical gap in the sports supplement industry. While working with elite athletes, Dr. Johnson noticed that many supplements lacked proper scientific validation and real-world efficacy testing.
               </p>
-              <p className="text-lg text-gray-700 mb-6">
-                Without an access to a gym, I had to look at alternative measures to improve my fitness and I found nutrition to be a gateway. I got in contact with a Nutritionist and within 6 months I saw my physical and mental states get elevated. Maybe, just maybe this was me "Levelling Up".
+              <p className="text-lg text-text-light mb-6">
+                This realization led to the creation of our research-driven approach. We assembled a team of leading scientists, nutritionists, and athletes to develop products that truly enhance performance. Our first breakthrough came with our patented recovery formulation, which has since become an industry standard.
               </p>
-              <p className="text-lg text-gray-700 mb-6">
-                For an athlete it is important to be better than yesterday. You can only be better than yesterday if you are willing to take that one step forward and upward. It will mean putting in a little extra effort but that bit of extra effort yields an exponential change.
+              <p className="text-lg text-text-light mb-6">
+                Today, we continue to push the boundaries of sports nutrition through ongoing research, athlete feedback, and technological innovation. Our commitment to excellence has earned us partnerships with professional sports teams and recognition from leading sports science institutions.
               </p>
-              <p className="text-lg text-gray-700 font-semibold">
-                And change is what we are after. You change, you evolve, you LEVEL UP!
+              <p className="text-lg text-primary font-semibold">
+                The journey continues as we strive to redefine what's possible in sports nutrition.
               </p>
             </div>
-            <div className="bg-gray-200 h-96 rounded-lg">
-              {/* Story image placeholder */}
+            <div className="bg-gradient-to-br from-primary/20 to-accent/20 h-96 rounded-custom shadow-custom flex items-center justify-center">
+              <span className="text-6xl">🏃‍♂️</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* Values Section */}
-      <section className="py-16">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">Our Values</h2>
+          <h2 className="text-4xl font-heading font-bold text-center mb-12 text-text-dark">Our Core Values</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value) => (
-              <div key={value.title} className="bg-white p-6 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold text-primary mb-4">{value.title}</h3>
-                <p className="text-gray-600">{value.description}</p>
+              <div key={value.title} className="bg-white p-8 rounded-custom shadow-custom text-center transform transition-all hover:scale-105">
+                <div className="text-4xl mb-4">{value.icon}</div>
+                <h3 className="text-xl font-heading font-semibold text-primary mb-4">{value.title}</h3>
+                <p className="text-text-light">{value.description}</p>
               </div>
             ))}
           </div>
@@ -115,32 +123,39 @@ export default function About() {
       </section>
 
       {/* Mission Section */}
-      <section className="py-16 bg-primary text-white">
+      <section className="py-20 bg-primary text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
+          <h2 className="text-4xl font-heading font-bold mb-6">Our Mission</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            At LevelUp Nutrition we want to empower athletes from the grassroots to the professionals with science-backed nutrition to help them reach peak performance, build resilience and unleash their true potential.
+            To revolutionize sports nutrition through scientific innovation, athlete-driven development, and uncompromising quality standards.
           </p>
-          <button className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
-            Join Our Community
+          <button className="bg-white text-primary px-8 py-4 rounded-custom font-semibold hover:bg-background transition-all transform hover:scale-105 shadow-custom">
+            Join Our Research Community
           </button>
         </div>
       </section>
 
       {/* Team Section */}
-      <section className="py-16">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">Meet Our Team</h2>
+          <h2 className="text-4xl font-heading font-bold text-center mb-12 text-text-dark">Our Expert Team</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {teamMembers.map((member) => (
-              <div key={member.name} className="bg-white rounded-lg shadow-lg overflow-hidden">
-                <div className="h-64 bg-gray-200">
-                  {/* Team member image placeholder */}
+              <div key={member.name} className="bg-white rounded-custom shadow-custom overflow-hidden transform transition-all hover:scale-105">
+                <div className="h-64 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                  <span className="text-6xl">👤</span>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
+                <div className="p-8">
+                  <h3 className="text-2xl font-heading font-semibold mb-2">{member.name}</h3>
                   <p className="text-primary font-medium mb-4">{member.role}</p>
-                  <p className="text-gray-600">{member.bio}</p>
+                  <p className="text-text-light mb-6">{member.bio}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {member.expertise.map((skill) => (
+                      <span key={skill} className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-custom">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             ))}
@@ -149,18 +164,25 @@ export default function About() {
       </section>
 
       {/* Quality Standards Section */}
-      <section className="py-16 bg-primary/5">
+      <section className="py-20 bg-background-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6">Our Quality Standards</h2>
-            <p className="text-lg text-gray-700 mb-8">
+            <h2 className="text-4xl font-heading font-bold mb-6 text-text-dark">Our Quality Standards</h2>
+            <p className="text-lg text-text-light mb-12">
               We maintain the highest standards in the industry, from ingredient sourcing to manufacturing and testing. Every product undergoes rigorous quality control to ensure safety, purity, and efficacy.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {['NSF Certified', 'GMP Compliant', 'Third-Party Tested', 'Research Backed'].map((standard) => (
-                <div key={standard} className="flex flex-col items-center">
-                  <div className="w-16 h-16 bg-primary/20 rounded-full mb-4"></div>
-                  <span className="font-semibold">{standard}</span>
+              {[
+                { name: 'NSF Certified', icon: '🏅' },
+                { name: 'GMP Compliant', icon: '📋' },
+                { name: 'Third-Party Tested', icon: '🔍' },
+                { name: 'Research Backed', icon: '📊' }
+              ].map((standard) => (
+                <div key={standard.name} className="flex flex-col items-center">
+                  <div className="w-20 h-20 bg-white rounded-custom shadow-custom flex items-center justify-center mb-4">
+                    <span className="text-3xl">{standard.icon}</span>
+                  </div>
+                  <span className="font-semibold text-text-dark">{standard.name}</span>
                 </div>
               ))}
             </div>
@@ -169,14 +191,14 @@ export default function About() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-primary text-white">
+      <section className="py-20 bg-gradient-to-br from-primary to-primary-dark text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Level Up?</h2>
-          <p className="text-lg mb-8 max-w-2xl mx-auto">
-            Join thousands of athletes who trust Level Up Nutrition for their performance needs.
+          <h2 className="text-4xl font-heading font-bold mb-6">Ready to Elevate Your Performance?</h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
+            Join elite athletes worldwide who trust LevelUp Nutrition for their performance needs.
           </p>
-          <button className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
-            Shop Now
+          <button className="bg-white text-primary px-8 py-4 rounded-custom font-semibold hover:bg-background transition-all transform hover:scale-105 shadow-custom">
+            Explore Our Products
           </button>
         </div>
       </section>

@@ -1,4 +1,4 @@
-// File: /Users/prapul/Documents/GitHub/Level_Up_Nutrition/app/layout.tsx
+// File: C:\Users\megha\OneDrive\Documents\Level_Up_Nutrition\app\layout.tsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
