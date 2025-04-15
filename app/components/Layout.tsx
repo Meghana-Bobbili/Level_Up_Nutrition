@@ -43,15 +43,15 @@ const Navigation = () => {
       {/* Main navigation */}
       <nav className="bg-white shadow-sm sticky top-0 z-50 border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-16">
+          <div className="flex justify-between h-12">
             <div className="flex items-center">
               <Link href="/" className="flex items-center">
                 <Image
                   src="/images/logo.jpg"
                   alt="Level Up Nutrition Logo"
-                  width={60}
-                  height={60}
-                  className="h-14 w-auto"
+                  width={40}
+                  height={40}
+                  className="h-10 w-auto"
                 />
               </Link>
             </div>
