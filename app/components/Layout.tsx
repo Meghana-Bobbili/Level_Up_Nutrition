@@ -21,14 +21,21 @@ const Navigation = () => {
   return (
     <>
       {/* Top banner */}
-      <div className="bg-primary text-white text-sm py-2">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-          <div className="flex items-center space-x-6">
-            <span>🚚 Order before 00:30 for next day delivery</span>
-            <span>📱 Extra 15% off through the App</span>
-          </div>
-          <div className="flex items-center space-x-4">
-            <span>⭐ Over 180k reviews & 4.5 rated</span>
+      <div className="bg-primary text-white text-sm py-2 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center">
+            <div className="animate-marquee whitespace-nowrap">
+              <span className="inline-block mr-8">🚚 Free shipping across India</span>
+              <span className="inline-block mr-8">📱 Extra 15% off through the App</span>
+              <span className="inline-block mr-8">⭐ Over 180k reviews & 4.5 rated</span>
+              <span className="inline-block mr-8">🎁 Special offers for new customers</span>
+            </div>
+            <div className="animate-marquee whitespace-nowrap">
+              <span className="inline-block mr-8">🚚 Free shipping across India</span>
+              <span className="inline-block mr-8">📱 Extra 15% off through the App</span>
+              <span className="inline-block mr-8">⭐ Over 180k reviews & 4.5 rated</span>
+              <span className="inline-block mr-8">🎁 Special offers for new customers</span>
+            </div>
           </div>
         </div>
       </div>
