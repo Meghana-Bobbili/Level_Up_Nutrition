@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { products, Product } from '@/app/shop/page';
+import { products, Product } from '@/app/data/products';
 import { notFound } from 'next/navigation';
 import { Tab } from '@headlessui/react';
 import { FaTruck, FaShieldAlt, FaLeaf, FaStar, FaStarHalf, FaCamera } from 'react-icons/fa';
