@@ -10,19 +10,53 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: 'rgb(239, 166, 52)',
-          light: 'rgb(244, 188, 102)',
-          dark: 'rgb(213, 148, 46)',
+          DEFAULT: '#004D4D', // Dark teal
+          dark: '#003939',
+          light: '#006666',
         },
-        white: 'rgb(255, 255, 255)',
+        secondary: {
+          DEFAULT: '#6BBF59', // Fresh green
+          dark: '#5AA548',
+          light: '#7CCF6A',
+        },
+        accent: {
+          DEFAULT: '#F9CB40', // Citrus yellow
+          dark: '#F0BC20',
+          light: '#FFDB60',
+        },
+        neutral: {
+          dark: '#2E2E2E',    // Charcoal gray
+          light: '#F4F4F4',   // Soft gray
+        },
+        background: {
+          DEFAULT: '#FFFFFF', // Warm white
+          alt: '#FAF6F1',    // Sand beige background
+        },
+        wellness: '#4A90E2',  // Wellness blue
+        herbal: '#A3B18A',    // Olive green
+        sand: '#EAE0D5',      // Sand beige
+        text: '#2E2E2E',
+        'text-light': '#666666',
+        border: '#E5E5E5',
       },
-      backgroundColor: {
-        primary: 'rgb(239, 166, 52)',
-        white: 'rgb(255, 255, 255)',
+      fontFamily: {
+        sans: ['var(--font-inter)'],
+        heading: ['var(--font-montserrat)'],
       },
-      textColor: {
-        primary: 'rgb(239, 166, 52)',
-        white: 'rgb(255, 255, 255)',
+      boxShadow: {
+        'custom': '0 2px 4px rgba(0,0,0,0.1)',
+      },
+      borderRadius: {
+        'custom': '4px',
+      },
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' }
+        }
+      },
+      animation: {
+        marquee: 'marquee 20s linear infinite'
       },
     },
   },

@@ -1,79 +1,96 @@
 import React from 'react';
 import Link from 'next/link';
+import type { NextPage } from 'next';
 
-const articles = [
+interface Article {
+  id: number;
+  title: string;
+  excerpt: string;
+  category: string;
+  author: string;
+  date: string;
+  readTime: string;
+  image: string;
+  tags: string[];
+}
+
+const articles: Article[] = [
   {
     id: 1,
-    title: "Beginner's Guide to Nutrition for Training",
-    excerpt: "Learn the fundamentals of nutrition to support your training goals. From macronutrients to meal timing, we cover everything you need to know to get started.",
-    category: "Nutrition Basics",
-    author: "Sarah Johnson",
-    date: "2024-03-15",
-    readTime: "8 min read",
-    image: "/blog/nutrition-basics.jpg"
+    title: "Advanced Performance Nutrition Strategies",
+    excerpt: "Explore cutting-edge nutrition protocols used by elite athletes. Learn about nutrient timing, supplementation stacks, and recovery optimization.",
+    category: "Performance",
+    author: "Dr. Sarah Johnson",
+    date: "2024-04-15",
+    readTime: "12 min read",
+    image: "/blog/performance.jpg",
+    tags: ["Performance", "Research", "Elite Athletes"]
   },
   {
     id: 2,
-    title: "Why Elite Athletes Use Creatine Daily",
-    excerpt: "Discover the science behind creatine supplementation and why it's a staple in elite athletes' nutrition programs. Learn about dosing, timing, and benefits.",
-    category: "Supplements",
+    title: "The Science of Recovery Nutrition",
+    excerpt: "Dive deep into the latest research on post-exercise nutrition. Discover optimal recovery protocols and evidence-based supplement strategies.",
+    category: "Recovery",
     author: "Dr. Michael Chen",
-    date: "2024-03-14",
-    readTime: "6 min read",
-    image: "/blog/creatine.jpg"
+    date: "2024-04-14",
+    readTime: "10 min read",
+    image: "/blog/recovery.jpg",
+    tags: ["Recovery", "Research", "Science"]
   },
   {
     id: 3,
-    title: "Top 5 Supplements for Recovery",
-    excerpt: "Optimize your recovery with these essential supplements. We break down the science behind each supplement and how to use them effectively.",
-    category: "Recovery",
-    author: "Alex Thompson",
-    date: "2024-03-13",
-    readTime: "10 min read",
-    image: "/blog/recovery.jpg"
+    title: "Optimizing Pre-Workout Nutrition",
+    excerpt: "Master your pre-workout nutrition with science-backed strategies. Learn about timing, composition, and supplementation for peak performance.",
+    category: "Performance",
+    author: "Emma Davis",
+    date: "2024-04-13",
+    readTime: "8 min read",
+    image: "/blog/preworkout.jpg",
+    tags: ["Performance", "Nutrition", "Training"]
   },
   {
     id: 4,
-    title: "Nutrition Timing for Maximum Performance",
-    excerpt: "Learn when to eat and supplement for optimal performance. Detailed guidelines for pre, during, and post-workout nutrition.",
-    category: "Performance",
-    author: "Emma Davis",
-    date: "2024-03-12",
-    readTime: "7 min read",
-    image: "/blog/timing.jpg"
+    title: "Advanced Supplementation Protocols",
+    excerpt: "Comprehensive guide to evidence-based supplementation. From dosing to timing, learn how to maximize the benefits of performance supplements.",
+    category: "Supplements",
+    author: "Dr. James Wilson",
+    date: "2024-04-12",
+    readTime: "15 min read",
+    image: "/blog/supplements.jpg",
+    tags: ["Supplements", "Research", "Protocols"]
   }
 ];
 
-const categories = [
+const categories: string[] = [
   "All",
-  "Nutrition Basics",
-  "Supplements",
-  "Recovery",
   "Performance",
-  "Success Stories",
-  "Research"
+  "Recovery",
+  "Supplements",
+  "Research",
+  "Case Studies",
+  "Protocols"
 ];
 
-export default function Blog() {
+const Blog: NextPage = () => {
   return (
-    <div className="bg-white min-h-screen py-12">
+    <div className="bg-background min-h-screen py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">Level Up Your Knowledge</h1>
-          <p className="text-xl text-gray-600">Expert insights, nutrition tips, and success stories</p>
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-heading font-bold mb-4 text-text-dark">Performance Insights</h1>
+          <p className="text-xl text-text-light">Expert research, advanced protocols, and performance optimization strategies</p>
         </div>
 
         {/* Categories */}
-        <div className="mb-12">
+        <div className="mb-16">
           <div className="flex flex-wrap gap-4 justify-center">
             {categories.map(category => (
               <button
                 key={category}
-                className={`px-4 py-2 rounded-full ${
+                className={`px-6 py-3 rounded-custom font-semibold transition-all ${
                   category === 'All'
-                    ? 'bg-primary text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-primary/10'
+                    ? 'bg-primary text-white shadow-custom'
+                    : 'bg-white text-text hover:bg-primary/10 hover:text-primary shadow-custom'
                 }`}
               >
                 {category}
@@ -83,26 +100,26 @@ export default function Blog() {
         </div>
 
         {/* Featured Article */}
-        <div className="mb-12">
-          <div className="relative h-[400px] rounded-xl overflow-hidden">
-            <div className="absolute inset-0 bg-gray-200"></div>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-            <div className="absolute bottom-0 left-0 p-8 text-white">
-              <div className="mb-4">
-                <span className="bg-primary px-3 py-1 rounded-full text-sm font-semibold">
-                  Featured
+        <div className="mb-16">
+          <div className="relative h-[500px] rounded-custom overflow-hidden shadow-custom">
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+            <div className="absolute bottom-0 left-0 p-12 text-white">
+              <div className="mb-6">
+                <span className="bg-primary px-4 py-2 rounded-custom text-sm font-semibold">
+                  Featured Research
                 </span>
               </div>
-              <h2 className="text-3xl font-bold mb-4">
-                The Complete Guide to Sports Nutrition
+              <h2 className="text-4xl font-heading font-bold mb-6">
+                The Future of Performance Nutrition
               </h2>
-              <p className="text-lg mb-4 max-w-2xl">
-                Everything you need to know about fueling your performance, from basic principles to advanced strategies.
+              <p className="text-xl mb-8 max-w-2xl">
+                Cutting-edge research and innovative approaches to performance optimization through advanced nutrition science.
               </p>
-              <div className="flex items-center gap-4">
-                <span>By Dr. James Wilson</span>
+              <div className="flex items-center gap-6">
+                <span className="font-semibold">By Dr. Sarah Johnson</span>
                 <span>•</span>
-                <span>15 min read</span>
+                <span>20 min read</span>
               </div>
             </div>
           </div>
@@ -111,32 +128,41 @@ export default function Blog() {
         {/* Article Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {articles.map(article => (
-            <article key={article.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="h-48 bg-gray-200 relative">
-                {/* Image placeholder */}
+            <article key={article.id} className="bg-white rounded-custom shadow-custom overflow-hidden transform transition-all hover:scale-105">
+              <div className="h-64 bg-gradient-to-br from-primary/20 to-accent/20 relative flex items-center justify-center">
+                <span className="text-6xl">📚</span>
               </div>
-              <div className="p-6">
+              <div className="p-8">
                 <div className="flex items-center gap-4 mb-4">
                   <span className="text-primary text-sm font-semibold">
                     {article.category}
                   </span>
-                  <span className="text-gray-400">•</span>
-                  <span className="text-gray-400 text-sm">{article.readTime}</span>
+                  <span className="text-text-light">•</span>
+                  <span className="text-text-light text-sm">{article.readTime}</span>
                 </div>
-                <h3 className="text-xl font-bold mb-2">
-                  <Link href={`/blog/${article.id}`} className="hover:text-primary">
+                <h3 className="text-2xl font-heading font-bold mb-4">
+                  <Link href={`/blog/${article.id}`} className="hover:text-primary transition-colors">
                     {article.title}
                   </Link>
                 </h3>
-                <p className="text-gray-600 mb-4 line-clamp-3">
+                <p className="text-text-light mb-6 line-clamp-3">
                   {article.excerpt}
                 </p>
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {article.tags.map(tag => (
+                    <span key={tag} className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-custom">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 rounded-full bg-gray-200"></div>
-                    <span className="text-sm text-gray-600">{article.author}</span>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                      <span className="text-lg">👤</span>
+                    </div>
+                    <span className="text-sm text-text-light">{article.author}</span>
                   </div>
-                  <span className="text-sm text-gray-400">{article.date}</span>
+                  <span className="text-sm text-text-light">{article.date}</span>
                 </div>
               </div>
             </article>
@@ -144,18 +170,18 @@ export default function Blog() {
         </div>
 
         {/* Newsletter */}
-        <div className="mt-16 bg-primary/5 rounded-xl p-8 text-center">
-          <h3 className="text-2xl font-bold mb-4">Stay Updated</h3>
-          <p className="text-gray-600 mb-6">
-            Get the latest nutrition tips and exclusive content delivered to your inbox
+        <div className="mt-20 bg-gradient-to-br from-primary/10 to-accent/10 rounded-custom p-12 text-center shadow-custom">
+          <h3 className="text-3xl font-heading font-bold mb-4 text-text-dark">Stay Ahead of the Game</h3>
+          <p className="text-text-light text-xl mb-8">
+            Get exclusive access to cutting-edge research and performance insights
           </p>
           <div className="max-w-md mx-auto flex gap-4">
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-grow px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-primary"
+              className="flex-grow px-6 py-4 rounded-custom border border-gray-200 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
             />
-            <button className="bg-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-primary-dark transition">
+            <button className="bg-primary text-white px-8 py-4 rounded-custom font-semibold hover:bg-primary-dark transition-all transform hover:scale-105 shadow-custom">
               Subscribe
             </button>
           </div>
@@ -163,4 +189,6 @@ export default function Blog() {
       </div>
     </div>
   );
-} 
+};
+
+export default Blog; 
