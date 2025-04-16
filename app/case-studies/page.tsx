@@ -99,30 +99,30 @@ export default function CaseStudies() {
     : caseStudies.filter(study => study.category === selectedCategory);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white py-12">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white py-8 sm:py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-16"
         >
-          <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+          <h1 className="text-3xl sm:text-5xl font-bold mb-3 sm:mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
             Success Stories
           </h1>
-          <p className="text-xl text-gray-600">
+          <p className="text-lg sm:text-xl text-gray-600">
             Real results from real people using our nutrition solutions
           </p>
         </motion.div>
 
-        <div className="flex justify-center gap-4 mb-12 overflow-x-auto pb-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 mb-8 sm:mb-12">
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-2 rounded-full text-sm font-semibold transition-colors
+              className={`w-full px-4 py-3 rounded-lg text-sm font-semibold transition-colors shadow-sm
                 ${selectedCategory === category
                   ? 'bg-primary text-white'
-                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                  : 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-200'
                 }`}
             >
               {category}
@@ -130,15 +130,15 @@ export default function CaseStudies() {
           ))}
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {filteredCases.map((study) => (
             <motion.div
               key={study.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="bg-white rounded-2xl shadow-xl overflow-hidden"
+              className="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl overflow-hidden"
             >
-              <div className="relative h-64">
+              <div className="relative h-48 sm:h-64">
                 <Image
                   src={study.image}
                   alt={study.name}
@@ -146,9 +146,9 @@ export default function CaseStudies() {
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
-                  <div className="p-6 text-white">
-                    <h2 className="text-2xl font-bold mb-2">{study.name}</h2>
-                    <div className="flex items-center gap-4 text-sm">
+                  <div className="p-4 sm:p-6 text-white">
+                    <h2 className="text-xl sm:text-2xl font-bold mb-2">{study.name}</h2>
+                    <div className="flex items-center gap-3 sm:gap-4 text-sm">
                       <span>{study.category}</span>
                       <span>•</span>
                       <span>{study.duration}</span>
@@ -157,12 +157,12 @@ export default function CaseStudies() {
                 </div>
               </div>
 
-              <div className="p-6">
-                <div className="grid grid-cols-3 gap-4 mb-6">
+              <div className="p-4 sm:p-6">
+                <div className="grid grid-cols-3 gap-3 sm:gap-4 mb-4 sm:mb-6">
                   {Object.entries(study.results).map(([key, value]) => (
                     <div key={key} className="text-center">
-                      <div className="text-primary font-bold">{value}</div>
-                      <div className="text-sm text-gray-500 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
+                      <div className="text-primary font-bold text-sm sm:text-base">{value}</div>
+                      <div className="text-xs sm:text-sm text-gray-500 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
                     </div>
                   ))}
                 </div>
@@ -171,7 +171,7 @@ export default function CaseStudies() {
                   onClick={() => setSelectedCase(selectedCase === study.id ? null : study.id)}
                   className="w-full text-left"
                 >
-                  <p className="text-gray-600 mb-4 line-clamp-2">
+                  <p className="text-gray-600 text-sm sm:text-base mb-4 line-clamp-2">
                     "{study.testimonial}"
                   </p>
                 </button>
@@ -180,25 +180,25 @@ export default function CaseStudies() {
                   <motion.div
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: 'auto' }}
-                    className="space-y-6"
+                    className="space-y-4 sm:space-y-6"
                   >
                     <div>
-                      <h3 className="font-semibold mb-3">Transformation Stats</h3>
-                      <div className="bg-gray-50 rounded-lg p-4">
-                        <table className="w-full">
+                      <h3 className="font-semibold mb-2 sm:mb-3 text-base sm:text-lg">Transformation Stats</h3>
+                      <div className="bg-gray-50 rounded-lg p-3 sm:p-4">
+                        <table className="w-full text-sm">
                           <thead>
-                            <tr className="text-sm text-gray-500">
-                              <th className="text-left">Metric</th>
-                              <th className="text-center">Before</th>
-                              <th className="text-center">After</th>
+                            <tr className="text-gray-500">
+                              <th className="text-left text-xs sm:text-sm">Metric</th>
+                              <th className="text-center text-xs sm:text-sm">Before</th>
+                              <th className="text-center text-xs sm:text-sm">After</th>
                             </tr>
                           </thead>
                           <tbody className="divide-y divide-gray-200">
                             {study.stats.map((stat) => (
                               <tr key={stat.label}>
-                                <td className="py-2">{stat.label}</td>
-                                <td className="text-center text-gray-500">{stat.before}</td>
-                                <td className="text-center text-primary font-semibold">{stat.after}</td>
+                                <td className="py-2 text-xs sm:text-sm">{stat.label}</td>
+                                <td className="text-center text-gray-500 text-xs sm:text-sm">{stat.before}</td>
+                                <td className="text-center text-primary font-semibold text-xs sm:text-sm">{stat.after}</td>
                               </tr>
                             ))}
                           </tbody>
@@ -207,12 +207,12 @@ export default function CaseStudies() {
                     </div>
 
                     <div>
-                      <h3 className="font-semibold mb-3">Products Used</h3>
+                      <h3 className="font-semibold mb-2 sm:mb-3 text-base sm:text-lg">Products Used</h3>
                       <div className="flex flex-wrap gap-2">
                         {study.products.map((product) => (
                           <span
                             key={product}
-                            className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm"
+                            className="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs sm:text-sm"
                           >
                             {product}
                           </span>
@@ -222,7 +222,7 @@ export default function CaseStudies() {
 
                     <Link
                       href="/stages"
-                      className="inline-block w-full text-center bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-dark transition"
+                      className="inline-block w-full text-center bg-primary text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold hover:bg-primary-dark transition text-sm sm:text-base"
                     >
                       Start Your Transformation
                     </Link>

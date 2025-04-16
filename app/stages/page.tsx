@@ -273,11 +273,11 @@ export default function NutritionStages() {
                         >
                           <div>
                             <h3 className="text-lg font-semibold mb-3">Key Benefits</h3>
-                            <ul className="grid grid-cols-2 gap-2">
+                            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                               {stage.benefits.map((benefit, i) => (
-                                <li key={i} className="flex items-start">
-                                  <span className="text-primary mr-2">✓</span>
-                                  <span className="text-sm text-gray-600">{benefit}</span>
+                                <li key={i} className="flex items-start space-x-2">
+                                  <span className="text-primary mt-0.5">✓</span>
+                                  <span className="text-sm text-gray-600 flex-1">{benefit}</span>
                                 </li>
                               ))}
                             </ul>
@@ -285,15 +285,20 @@ export default function NutritionStages() {
 
                           <div>
                             <h3 className="text-lg font-semibold mb-3">Recommended Products</h3>
-                            <div className="grid grid-cols-2 gap-4">
+                            <div className="space-y-3">
                               {stage.products.map(product => (
                                 <Link 
                                   href={`/shop/${product.id}`}
                                   key={product.name}
-                                  className="flex justify-between items-center hover:bg-gray-50 p-2 rounded-lg transition-colors"
+                                  className="flex justify-between items-center bg-white p-4 rounded-lg shadow-sm border border-gray-100 hover:border-primary/20 hover:bg-primary/5 transition-colors"
                                 >
-                                  <span className="text-gray-600 text-sm">{product.name}</span>
-                                  <span className="text-primary font-semibold">${product.price}</span>
+                                  <span className="text-gray-800">{product.name}</span>
+                                  <div className="flex items-center space-x-2">
+                                    <span className="text-primary font-semibold">${product.price}</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
+                                      <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                                    </svg>
+                                  </div>
                                 </Link>
                               ))}
                             </div>
@@ -301,19 +306,36 @@ export default function NutritionStages() {
 
                           <div>
                             <h3 className="text-lg font-semibold mb-3">Daily Routine</h3>
-                            <pre className="bg-gray-50 p-4 rounded-lg text-gray-600 text-sm whitespace-pre-wrap">
-                              {stage.routine}
-                            </pre>
+                            <div className="bg-gray-50 rounded-lg p-4 space-y-3">
+                              {stage.routine.split('\n').map((line, index) => (
+                                <div key={index} className="flex items-start space-x-3">
+                                  <div className="w-2 h-2 rounded-full bg-primary mt-2"></div>
+                                  <p className="text-sm text-gray-600 flex-1">{line}</p>
+                                </div>
+                              ))}
+                            </div>
                           </div>
 
-                          <div className="pt-4">
-                            <Link
-                              href={`/shop?level=${stage.level}`}
-                              className={`inline-block text-center bg-gradient-to-r ${stage.color} text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition w-full`}
-                            >
-                              Get Started with {stage.name}
-                            </Link>
+                          <div>
+                            <h3 className="text-lg font-semibold mb-3">Focus Areas</h3>
+                            <div className="flex flex-wrap gap-2">
+                              {stage.focus.map((item, index) => (
+                                <span 
+                                  key={index}
+                                  className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-primary/10 text-primary"
+                                >
+                                  {item}
+                                </span>
+                              ))}
+                            </div>
                           </div>
+
+                          <Link
+                            href={`/shop?stage=${stage.name}`}
+                            className="block w-full text-center bg-primary text-white mt-6 px-6 py-3 rounded-lg font-semibold hover:bg-primary-dark transition-colors"
+                          >
+                            Get Started with {stage.name}
+                          </Link>
                         </motion.div>
                       )}
                     </div>
