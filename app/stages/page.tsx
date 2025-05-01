@@ -164,7 +164,7 @@ export default function NutritionStages() {
           className="text-center mb-16"
         >
           <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-            Find Your Nutrition Stage
+            Discover your Edge
           </h1>
           <p className="text-xl text-gray-600">
             {!recommendedStage 

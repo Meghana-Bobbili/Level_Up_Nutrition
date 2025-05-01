@@ -24,7 +24,7 @@ const Navigation = () => {
   return (
     <>
       {/* Top banner */}
-      <div className="bg-primary text-white text-sm py-2 overflow-hidden">
+      <div className="bg-primary text-secondary text-sm py-2 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center">
             <div className="animate-marquee whitespace-nowrap">
@@ -44,42 +44,42 @@ const Navigation = () => {
       </div>
 
       {/* Main navigation */}
-      <nav className="bg-white shadow-sm sticky top-0 z-50 border-b border-border">
+      <nav className="bg-white   shadow-sm sticky top-0 z-50 border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-12">
             <div className="flex items-center">
               <Link href="/" className="flex items-center">
                 <Image
-                  src="/images/logo.jpg"
+                  src="/logo.jpg"
                   alt="Level Up Nutrition Logo"
-                  width={40}
-                  height={40}
-                  className="h-10 w-auto"
+                  width={100}
+                  height={100}
+                  className="h-12 w-auto"
                 />
               </Link>
             </div>
 
             {/* Desktop menu */}
             <div className="hidden md:flex items-center space-x-8">
-              <Link href="/shop" className="text-text hover:text-secondary transition-colors font-medium">Shop</Link>
-              <Link href="/stages" className="text-text hover:text-secondary transition-colors font-medium">Nutrition Stages</Link>
-              <Link href="/blog" className="text-text hover:text-secondary transition-colors font-medium">Blog</Link>
-              <Link href="/case-studies" className="text-text hover:text-secondary transition-colors font-medium">Case Studies</Link>
-              <Link href="/about" className="text-text hover:text-secondary transition-colors font-medium">About</Link>
-              <Link href="/contact" className="text-text hover:text-secondary transition-colors font-medium">Contact</Link>
+              <Link href="/shop" className="text-black hover:text-primary transition-colors font-medium">Shop</Link>
+              <Link href="/stages" className="text-black hover:text-primary transition-colors font-medium">Discover your edge</Link>
+              <Link href="/blog" className="text-black hover:text-primary transition-colors font-medium">Blog</Link>
+              <Link href="/case-studies" className="text-black hover:text-primary transition-colors font-medium">Case Studies</Link>
+              <Link href="/about" className="text-black hover:text-primary transition-colors font-medium">About</Link>
+              <Link href="/contact" className="text-black hover:text-primary transition-colors font-medium">Contact</Link>
             </div>
 
             {/* Mobile menu button and cart */}
             <div className="flex items-center space-x-4">
               <button 
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="md:hidden text-text hover:text-secondary transition-colors"
+                className="md:hidden text-text-light hover:text-primary transition-colors"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
               </button>
-              <button className="text-text hover:text-secondary transition-colors">
+              <button className="text-text-light hover:text-primary transition-colors">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
                 </svg>
@@ -90,12 +90,31 @@ const Navigation = () => {
           {/* Mobile menu */}
           <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <Link href="/shop" onClick={closeMenu} className="block px-3 py-2 text-text hover:text-secondary transition-colors font-medium">Shop</Link>
-              <Link href="/stages" onClick={closeMenu} className="block px-3 py-2 text-text hover:text-secondary transition-colors font-medium">Nutrition Stages</Link>
-              <Link href="/blog" onClick={closeMenu} className="block px-3 py-2 text-text hover:text-secondary transition-colors font-medium">Blog</Link>
-              <Link href="/case-studies" onClick={closeMenu} className="block px-3 py-2 text-text hover:text-secondary transition-colors font-medium">Case Studies</Link>
-              <Link href="/about" onClick={closeMenu} className="block px-3 py-2 text-text hover:text-secondary transition-colors font-medium">About</Link>
-              <Link href="/contact" onClick={closeMenu} className="block px-3 py-2 text-text hover:text-secondary transition-colors font-medium">Contact</Link>
+              <Link href="/shop" onClick={closeMenu} className="block px-3 py-2 text-text-light hover:text-primary transition-colors font-medium">Shop</Link>
+              <Link href="/stages" onClick={closeMenu} className="block px-3 py-2 text-text-light hover:text-primary transition-colors font-medium">Discover your edge</Link>
+              <div className="block">
+                <span className="block px-3 py-2 text-text-light font-medium">Nutrition Plans</span>
+                <a
+                  href="/nutrition_benifits.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-6 py-2 text-text-light hover:text-primary transition-colors font-medium"
+                >
+                  Brochure
+                </a>
+                <a
+                  href="GOOGLE_FORM_URL"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-6 py-2 text-text-light hover:text-primary transition-colors font-medium"
+                >
+                  Google Form
+                </a>
+              </div>
+              <Link href="/blog" onClick={closeMenu} className="block px-3 py-2 text-text-light hover:text-primary transition-colors font-medium">Blog</Link>
+              <Link href="/case-studies" onClick={closeMenu} className="block px-3 py-2 text-text-light hover:text-primary transition-colors font-medium">Case Studies</Link>
+              <Link href="/about" onClick={closeMenu} className="block px-3 py-2 text-text-light hover:text-primary transition-colors font-medium">About</Link>
+              <Link href="/contact" onClick={closeMenu} className="block px-3 py-2 text-text-light hover:text-primary transition-colors font-medium">Contact</Link>
             </div>
           </div>
         </div>
@@ -106,13 +125,13 @@ const Navigation = () => {
 
 const Footer = () => {
   return (
-    <footer className="bg-primary text-white">
+    <footer className="bg-background-alt text-text-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center space-x-3 mb-4">
               <Image
-                src="/images/logo.jpg"
+                src="/logo.jpg"
                 alt="Level Up Nutrition Logo"
                 width={80}
                 height={80}
@@ -125,49 +144,49 @@ const Footer = () => {
                 alt="Founder"
                 width={60}
                 height={60}
-                className="rounded-full h-15 w-15 border-2 border-white"
+                className="rounded-full h-15 w-15 border-2 border-primary"
               />
               <div>
-                <p className="font-semibold">Dr. Sarah Johnson</p>
+                <p className="font-semibold text-text-dark">Dr. Sarah Johnson</p>
                 <p className="text-sm opacity-90">Founder & Chief Nutritionist</p>
               </div>
             </div>
             <p className="text-sm opacity-90">Empowering athletes to reach their full potential through science-backed nutrition.</p>
           </div>
           <div>
-            <h4 className="font-bold mb-4">Quick Links</h4>
+            <h4 className="font-bold mb-4 text-text-dark">Quick Links</h4>
             <ul className="space-y-2">
-              <li><Link href="/shop" className="hover:text-accent transition-colors">Shop</Link></li>
-              <li><Link href="/blog" className="hover:text-accent transition-colors">Blog</Link></li>
-              <li><Link href="/about" className="hover:text-accent transition-colors">About</Link></li>
-              <li><Link href="/contact" className="hover:text-accent transition-colors">Contact</Link></li>
+              <li><Link href="/shop" className="hover:text-primary transition-colors">Shop</Link></li>
+              <li><Link href="/blog" className="hover:text-primary transition-colors">Blog</Link></li>
+              <li><Link href="/about" className="hover:text-primary transition-colors">About</Link></li>
+              <li><Link href="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
             </ul>
           </div>
           <div>
-            <h4 className="font-bold mb-4">Support</h4>
+            <h4 className="font-bold mb-4 text-text-dark">Support</h4>
             <ul className="space-y-2">
-              <li><Link href="/track-order" className="hover:text-accent transition-colors">Track Order</Link></li>
-              <li><Link href="/shipping" className="hover:text-accent transition-colors">Shipping Info</Link></li>
-              <li><Link href="/returns" className="hover:text-accent transition-colors">Returns</Link></li>
-              <li><Link href="/faq" className="hover:text-accent transition-colors">FAQ</Link></li>
+              <li><Link href="/track-order" className="hover:text-primary transition-colors">Track Order</Link></li>
+              <li><Link href="/shipping" className="hover:text-primary transition-colors">Shipping Info</Link></li>
+              <li><Link href="/returns" className="hover:text-primary transition-colors">Returns</Link></li>
+              <li><Link href="/faq" className="hover:text-primary transition-colors">FAQ</Link></li>
             </ul>
           </div>
           <div>
-            <h4 className="font-bold mb-4">Newsletter</h4>
+            <h4 className="font-bold mb-4 text-text-dark">Newsletter</h4>
             <p className="text-sm mb-4 opacity-90">Stay updated with our latest products and news</p>
             <div className="space-y-3">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="w-full p-2 rounded-custom text-text bg-white focus:outline-none focus:ring-2 focus:ring-accent"
+                className="w-full p-2 rounded-custom text-text-light bg-background border border-border focus:outline-none focus:ring-2 focus:ring-primary"
               />
-              <button className="w-full bg-secondary text-white px-4 py-2 rounded-custom font-semibold hover:bg-secondary-dark transition-colors">
+              <button className="w-full bg-primary text-secondary px-4 py-2 rounded-custom font-semibold hover:bg-primary/90 transition-colors">
                 Subscribe
               </button>
             </div>
           </div>
         </div>
-        <div className="mt-8 pt-8 border-t border-white/20 text-center">
+        <div className="mt-8 pt-8 border-t border-border text-center">
           <p className="text-sm opacity-90">&copy; {new Date().getFullYear()} Level Up Nutrition. All rights reserved.</p>
         </div>
       </div>

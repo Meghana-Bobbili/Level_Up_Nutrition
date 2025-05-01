@@ -16,7 +16,13 @@ interface PriceRange {
 
 const filters = {
   goals: ['Energy', 'Recovery', 'Muscle Gain', 'Fat Loss', 'Performance'],
-  categories: ['Protein', 'Creatine', 'Hydration', 'Vitamins', 'Pre-Workout', 'Amino Acids'],
+  categories: [
+    'LevelUp Whey Series',
+    'LevelUp Daily Series',
+    'LevelUp Performance Series',
+    'LevelUp Hydration Series',
+    'LevelUp Recovery Series'
+  ],
   levels: ['Beginner', 'Intermediate', 'Pro'],
   priceRanges: [
     { label: 'Under $25', min: 0, max: 25 },

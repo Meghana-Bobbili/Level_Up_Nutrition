@@ -4,6 +4,8 @@ export interface Product {
   description: string;
   price: number;
   category: string;
+  series: string;
+  subcategory: string;
   goal: string;
   level: string;
   image: string;
@@ -28,7 +30,9 @@ export const products: Product[] = [
     name: 'Elite Whey+',
     description: 'Fuel your muscles with 25g of clean whey protein per scoop.',
     price: 49.99,
-    category: 'Protein',
+    category: 'LevelUp Whey Series',
+    series: 'LevelUp Whey Series',
+    subcategory: 'Whey Concentrate',
     goal: 'Muscle Gain',
     level: 'Pro',
     image: '/products/whey.jpg',
@@ -51,7 +55,9 @@ export const products: Product[] = [
     name: 'Recovery Aminos',
     description: 'Essential amino acids for faster recovery and reduced muscle soreness.',
     price: 39.99,
-    category: 'Amino Acids',
+    category: 'LevelUp Recovery Series',
+    series: 'LevelUp Recovery Series',
+    subcategory: 'L-Glutamine',
     goal: 'Recovery',
     level: 'Intermediate',
     image: '/products/whey.jpg',
@@ -74,7 +80,9 @@ export const products: Product[] = [
     name: 'ElectroFuel',
     description: 'Advanced electrolyte formula with 5 key minerals for optimal hydration.',
     price: 29.99,
-    category: 'Hydration',
+    category: 'LevelUp Hydration Series',
+    series: 'LevelUp Hydration Series',
+    subcategory: 'Electrolytes',
     goal: 'Energy',
     level: 'Beginner',
     image: '/products/whey.jpg',
@@ -97,7 +105,9 @@ export const products: Product[] = [
     name: 'Creatine Monohydrate',
     description: 'Pure creatine monohydrate for increased strength and power output.',
     price: 24.99,
-    category: 'Creatine',
+    category: 'LevelUp Performance Series',
+    series: 'LevelUp Performance Series',
+    subcategory: 'Creatine Monohydrate',
     goal: 'Performance',
     level: 'Pro',
     image: '/products/whey.jpg',
@@ -120,7 +130,9 @@ export const products: Product[] = [
     name: 'Omega-3 Complex',
     description: 'High-potency fish oil with EPA and DHA for joint and heart health.',
     price: 34.99,
-    category: 'Vitamins',
+    category: 'LevelUp Daily Series',
+    series: 'LevelUp Daily Series',
+    subcategory: 'Omega-3',
     goal: 'Recovery',
     level: 'Intermediate',
     image: '/products/whey.jpg',
@@ -143,7 +155,9 @@ export const products: Product[] = [
     name: 'Pre-Workout Elite',
     description: 'Advanced pre-workout formula with clinically dosed ingredients.',
     price: 44.99,
-    category: 'Pre-Workout',
+    category: 'LevelUp Performance Series',
+    series: 'LevelUp Performance Series',
+    subcategory: 'Pre-workout',
     goal: 'Energy',
     level: 'Pro',
     image: '/products/whey.jpg',

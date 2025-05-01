@@ -8,64 +8,57 @@ import { useEffect, useState } from 'react';
 
 const Hero = () => {
   return (
-    <div className="relative">
-     
-      {/* Main Hero Section */}
-      <div className="relative h-[600px] bg-gradient-to-r from-primary to-primary-dark">
+    <div>
+      {/* Hero Section */}
+      <div className="relative h-[600px]">
         <div className="absolute inset-0">
           <Image
             src="https://images.unsplash.com/photo-1579758629938-03607ccdbaba?q=80&w=2070"
-            alt="Fitness Background"
+            alt="Hero Background"
             fill
-            className="object-cover opacity-20"
+            className="object-cover"
+            priority
           />
+          <div className="absolute inset-0 bg-background/60" />
         </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Transform Your Performance with Premium Nutrition
-              </h1>
-              <p className="text-lg text-white/90 mb-8">
-                Science-backed supplements designed for athletes who demand the best. Elevate your game with our premium nutrition solutions.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Link 
-                  href="/shop"
-                  className="bg-secondary hover:bg-secondary-dark text-white px-8 py-3 rounded-custom font-semibold transition-colors"
-                >
-                  Shop Now
-                </Link>
-                <Link 
-                  href="/consultation"
-                  className="bg-white hover:bg-neutral-light text-primary px-8 py-3 rounded-custom font-semibold transition-colors"
-                >
-                  Free Consultation
-                </Link>
-              </div>
-            </div>
-            <div className="hidden md:block">
-              <div className="relative h-[400px] w-full">
-                <Image
-                  src="https://images.unsplash.com/photo-1579758682665-53a1a614eea6?q=80&w=987"
-                  alt="Premium Supplements"
-                  fill
-                  className="object-cover rounded-custom"
-                />
-              </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+          <div className="max-w-2xl">
+            <h1 className="text-5xl font-bold text-text-dark mb-6">
+            LevelUp your Performance with Premium Nutrition
+            </h1>
+            <p className="text-xl text-text-light mb-8">
+            Science-backed supplements designed for athletes who demand the best. Elevate your game with our premium nutrition solutions.
+            </p>
+            <div className="flex space-x-4">
+              <Link
+                href="/nutrition_benifits.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-primary text-secondary px-8 py-3 rounded-custom font-semibold hover:bg-primary/90 transition-colors"
+              >
+                Brochure
+              </Link>
+              <Link
+                href="/nutrition_benifits.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-2 border-primary text-primary px-8 py-3 rounded-custom font-semibold hover:bg-primary/10 transition-colors"
+              >
+                Google Docs
+              </Link>
             </div>
           </div>
         </div>
       </div>
 
       {/* Features Section */}
-      <div className="bg-white py-16">
+      <div className="bg-background-alt py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="flex flex-col items-center text-center p-6 bg-background-alt rounded-custom">
+          <div className="flex flex-col items-center text-center p-6 bg-background-alt rounded-custom">
               <Image
                 src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=2070"
-                alt="Natural Ingredients"
+                alt="Premium Quality"
                 width={200}
                 height={200}
                 className="rounded-full mb-4 object-cover"
@@ -82,76 +75,19 @@ const Hero = () => {
                 className="rounded-full mb-4 object-cover"
               />
               <h3 className="text-xl font-bold text-primary mb-2">Science Backed</h3>
-              <p className="text-text-light">Research-proven formulations for optimal results</p>
+              <p className="text-text-light">Formulated by leading sports nutritionists</p>
             </div>
             <div className="flex flex-col items-center text-center p-6 bg-background-alt rounded-custom">
               <Image
-                src="https://images.unsplash.com/photo-1574689049597-7e6ed3ca358e?q=80&w=2070"
-                alt="Premium Quality"
+                src="https://images.unsplash.com/photo-1529339967086-b7b8331acb18?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Proven Results"
                 width={200}
                 height={200}
                 className="rounded-full mb-4 object-cover"
               />
               <h3 className="text-xl font-bold text-primary mb-2">Premium Quality</h3>
-              <p className="text-text-light">Third-party tested for purity and potency</p>
+              <p className="text-text-light">Grass-fed whey sourced directly from the UK</p>
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Featured Products */}
-      <div className="bg-background-alt py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-primary mb-12 text-center">Best Sellers</h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[
-              {
-                id: 1,
-                name: "Elite Whey+",
-                image: "/products/whey.jpg",
-                price: 49.99
-              },
-              {
-                id: 6,
-                name: "Pre-Workout Elite",
-                image: "/products/whey.jpg",
-                price: 44.99
-              },
-              {
-                id: 2,
-                name: "Recovery Aminos",
-                image: "/products/whey.jpg",
-                price: 39.99
-              },
-              {
-                id: 5,
-                name: "Omega-3 Complex",
-                image: "/products/whey.jpg",
-                price: 34.99
-              }
-            ].map((product, index) => (
-              <Link 
-                href={`/shop/${product.id}`} 
-                key={index} 
-                className="bg-white rounded-custom shadow-custom overflow-hidden group hover:scale-105 transition-transform"
-              >
-                <div className="relative h-48">
-                  <Image
-                    src={product.image}
-                    alt={product.name}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="font-bold text-lg mb-2">{product.name}</h3>
-                  <p className="text-text-light mb-4">${product.price}</p>
-                  <button className="w-full bg-secondary hover:bg-secondary-dark text-white px-4 py-2 rounded-custom font-semibold transition-colors">
-                    View Details
-                  </button>
-                </div>
-              </Link>
-            ))}
           </div>
         </div>
       </div>
