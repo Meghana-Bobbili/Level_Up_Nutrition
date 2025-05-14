@@ -9,15 +9,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: '#F8A622', // Primary CTA
-        secondary: '#1A1A1A', // Background
-        accent: '#E87222', // Accent for urgency/alerts
-        background: '#1A1A1A', // Matte dark background
-        'background-alt': '#2A2A2A', // Slightly lighter dark
-        'text-light': '#B0BAC6', // Subtext
-        'text-dark': '#FFFFFF', // Headings
-        highlight: '#4BD37B', // Green for positive/nutrient flags
-        border: '#333333',
+        primary: '#18315A', // Dark blue for primary/accent
+        accent: '#18315A', // Dark blue for accent
+        heading: '#F8A622', // Orange for headings/buttons
+        button: '#F8A622', // Orange for buttons
+        'button-accent': '#E87222', // Secondary orange accent
+        secondary: '#FFFFFF', // White background
+        background: '#FFFFFF',
+        'background-alt': '#F3F4F6',
+        'text-light': '#4B5563',
+        'text-dark': '#18315A',
+        highlight: '#F8A622',
+        border: '#E5E7EB',
       },
       fontFamily: {
         sans: ['var(--font-inter)'],

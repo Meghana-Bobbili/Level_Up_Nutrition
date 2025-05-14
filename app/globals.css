@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 26, 26, 26;
-  --background-end-rgb: 26, 26, 26;
+  --foreground-rgb: 255, 255, 255; /* white text */
+  --background-start-rgb: 24, 49, 90; /* dark blue */
+  --background-end-rgb: 24, 49, 90; /* dark blue */
 }
 
 * {
@@ -42,7 +42,7 @@ a, button {
 }
 
 ::-webkit-scrollbar-track {
-  background: #1A1A1A;
+  background: #FFFFFF;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -63,7 +63,7 @@ a, button {
 /* Selection styles */
 ::selection {
   background: #F8A622;
-  color: #1A1A1A;
+  color: #FFFFFF;
 }
 
 /* Container responsiveness */
@@ -101,7 +101,7 @@ a, button {
 
 @layer base {
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif text-text-dark;
+    @apply font-serif text-heading;
   }
   
   p {
@@ -111,7 +111,7 @@ a, button {
 
 @layer components {
   .btn-primary {
-    @apply bg-primary hover:bg-primary/90 text-secondary font-semibold py-2 px-4 rounded-custom transition-colors;
+    @apply bg-heading hover:bg-button-accent text-secondary font-semibold py-2 px-4 rounded-custom transition-colors;
   }
   
   .btn-secondary {
@@ -123,7 +123,11 @@ a, button {
   }
   
   .card {
-    @apply bg-background-alt rounded-custom shadow-custom p-6;
+    @apply bg-white text-text-dark rounded-custom shadow-custom p-6;
+  }
+  
+  .card-alt {
+    @apply bg-background-alt text-text-dark rounded-custom shadow-custom p-6;
   }
   
   .input-field {

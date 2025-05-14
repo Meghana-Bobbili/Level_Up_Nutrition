@@ -69,15 +69,15 @@ export default function SwiperComponent() {
               className="relative group cursor-pointer overflow-hidden rounded-custom block"
             >
               <div className="relative h-64">
-                <div className="absolute inset-0 bg-primary/60 group-hover:bg-primary/80 transition-colors z-10" />
+                <div className="absolute inset-0 bg-[#18315A]/80 group-hover:bg-[#18315A]/90 transition-colors z-10" />
                 <img
                   src={category.image}
                   alt={category.title}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 flex flex-col justify-center items-center text-white z-20 p-6">
-                  <h4 className="text-2xl font-serif font-bold mb-2">{category.title}</h4>
-                  <p className="text-center text-sm bg-background/20 backdrop-blur-sm px-4 py-2 rounded-custom">{category.description}</p>
+                <div className="absolute inset-0 flex flex-col justify-center items-center z-20 p-6">
+                  <h4 className="text-2xl font-serif font-bold mb-2 text-heading drop-shadow-lg">{category.title}</h4>
+                  <p className="text-center text-sm bg-white/10 backdrop-blur-sm px-4 py-2 rounded-custom text-white drop-shadow">{category.description}</p>
                 </div>
               </div>
             </Link>

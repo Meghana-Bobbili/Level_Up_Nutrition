@@ -15,7 +15,7 @@ export default function Home() {
       <div className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-primary mb-4">Why Choose Level Up Nutrition?</h2>
+            <h2 className="text-3xl font-bold text-heading mb-4">Why Choose Level Up Nutrition?</h2>
             <p className="text-text-light max-w-2xl mx-auto">Our commitment to athlete development and performance driven supplementation sets us apart in the nutrition industry.</p>
           </div>
 
@@ -27,9 +27,9 @@ export default function Home() {
               { number: "4.8/5", label: "Customer Rating" },
               { number: "24/7", label: "Expert Support" }
             ].map((stat, index) => (
-              <div key={index} className="text-center p-6 bg-background-alt rounded-custom">
-                <div className="text-3xl font-bold text-secondary mb-2">{stat.number}</div>
-                <div className="text-text-light">{stat.label}</div>
+              <div key={index} className="text-center p-8 bg-primary rounded-custom shadow-custom">
+                <div className="text-4xl font-extrabold text-heading mb-2">{stat.number}</div>
+                <div className="text-white text-lg">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -58,11 +58,11 @@ export default function Home() {
                   role: "Personal Trainer"
                 }
               ].map((testimonial, index) => (
-                <div key={index} className="bg-white p-6 rounded-custom shadow-custom">
-                  <div className="text-accent mb-4">★★★★★</div>
+                <div key={index} className="bg-background-alt p-6 rounded-custom shadow-custom">
+                  <div className="text-heading mb-4">★★★★★</div>
                   <p className="text-text-light mb-4">{testimonial.quote}</p>
                   <div>
-                    <div className="font-semibold">{testimonial.author}</div>
+                    <div className="font-semibold text-heading">{testimonial.author}</div>
                     <div className="text-sm text-text-light">{testimonial.role}</div>
                   </div>
                 </div>

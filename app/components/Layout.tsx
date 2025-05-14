@@ -125,7 +125,7 @@ const Navigation = () => {
 
 const Footer = () => {
   return (
-    <footer className="bg-background-alt text-text-light">
+    <footer className="bg-primary text-white border-t-4 border-heading shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
@@ -144,50 +144,50 @@ const Footer = () => {
                 alt="Founder"
                 width={60}
                 height={60}
-                className="rounded-full h-15 w-15 border-2 border-primary"
+                className="rounded-full h-15 w-15 border-2 border-heading"
               />
               <div>
-                <p className="font-semibold text-text-dark">Dr. Sarah Johnson</p>
-                <p className="text-sm opacity-90">Founder & Chief Nutritionist</p>
+                <p className="font-semibold text-heading">Dr. Sarah Johnson</p>
+                <p className="text-sm text-gray-300">Founder & Chief Nutritionist</p>
               </div>
             </div>
-            <p className="text-sm opacity-90">Empowering athletes to reach their full potential through science-backed nutrition.</p>
+            <p className="text-sm text-gray-300">Empowering athletes to reach their full potential through science-backed nutrition.</p>
           </div>
           <div>
-            <h4 className="font-bold mb-4 text-text-dark">Quick Links</h4>
+            <h4 className="font-bold mb-4 text-heading">Quick Links</h4>
             <ul className="space-y-2">
-              <li><Link href="/shop" className="hover:text-primary transition-colors">Shop</Link></li>
-              <li><Link href="/blog" className="hover:text-primary transition-colors">Blog</Link></li>
-              <li><Link href="/about" className="hover:text-primary transition-colors">About</Link></li>
-              <li><Link href="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
+              <li><Link href="/shop" className="hover:text-heading transition-colors">Shop</Link></li>
+              <li><Link href="/blog" className="hover:text-heading transition-colors">Blog</Link></li>
+              <li><Link href="/about" className="hover:text-heading transition-colors">About</Link></li>
+              <li><Link href="/contact" className="hover:text-heading transition-colors">Contact</Link></li>
             </ul>
           </div>
           <div>
-            <h4 className="font-bold mb-4 text-text-dark">Support</h4>
+            <h4 className="font-bold mb-4 text-heading">Support</h4>
             <ul className="space-y-2">
-              <li><Link href="/track-order" className="hover:text-primary transition-colors">Track Order</Link></li>
-              <li><Link href="/shipping" className="hover:text-primary transition-colors">Shipping Info</Link></li>
-              <li><Link href="/returns" className="hover:text-primary transition-colors">Returns</Link></li>
-              <li><Link href="/faq" className="hover:text-primary transition-colors">FAQ</Link></li>
+              <li><Link href="/track-order" className="hover:text-heading transition-colors">Track Order</Link></li>
+              <li><Link href="/shipping" className="hover:text-heading transition-colors">Shipping Info</Link></li>
+              <li><Link href="/returns" className="hover:text-heading transition-colors">Returns</Link></li>
+              <li><Link href="/faq" className="hover:text-heading transition-colors">FAQ</Link></li>
             </ul>
           </div>
           <div>
-            <h4 className="font-bold mb-4 text-text-dark">Newsletter</h4>
-            <p className="text-sm mb-4 opacity-90">Stay updated with our latest products and news</p>
+            <h4 className="font-bold mb-4 text-heading">Newsletter</h4>
+            <p className="text-sm mb-4 text-gray-300">Stay updated with our latest products and news</p>
             <div className="space-y-3">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="w-full p-2 rounded-custom text-text-light bg-background border border-border focus:outline-none focus:ring-2 focus:ring-primary"
+                className="w-full p-2 rounded-custom text-primary bg-white border border-border focus:outline-none focus:ring-2 focus:ring-heading"
               />
-              <button className="w-full bg-primary text-secondary px-4 py-2 rounded-custom font-semibold hover:bg-primary/90 transition-colors">
+              <button className="w-full bg-heading text-primary px-4 py-2 rounded-custom font-semibold hover:bg-button-accent transition-colors">
                 Subscribe
               </button>
             </div>
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-border text-center">
-          <p className="text-sm opacity-90">&copy; {new Date().getFullYear()} Level Up Nutrition. All rights reserved.</p>
+          <p className="text-sm text-gray-300">&copy; {new Date().getFullYear()} Level Up Nutrition. All rights reserved.</p>
         </div>
       </div>
     </footer>
